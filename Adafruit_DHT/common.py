@@ -64,7 +64,9 @@ def get_platform():
         from . import Beaglebone_Black
         return Beaglebone_Black
     else:
-        raise RuntimeError('Unknown platform.')
+        """raise RuntimeError('Unknown platform.')"""
+        from . import Raspberry_Pi_2
+        return Raspberry_Pi_2
 
 def read(sensor, pin, platform=None):
     """Read DHT sensor of specified sensor type (DHT11, DHT22, or AM2302) on
